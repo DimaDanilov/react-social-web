@@ -1,0 +1,8 @@
+.app-wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "nav cont";
+  grid-template-columns: 1fr 6fr;
+}

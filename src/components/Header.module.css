@@ -1,0 +1,13 @@
+.header{
+    grid-area: header;
+    background-color: white;
+}
+
+.logo_wrapper{
+    width: 9%;
+}
+  
+.app_logo{
+    padding: 13% 20%;
+    width: 100%;
+}

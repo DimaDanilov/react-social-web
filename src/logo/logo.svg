@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="847.62561"
+   height="220.6823"
+   viewBox="0 0 224.26761 58.388858"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="136.30746"
+       y="83.655365"
+       width="104.66682"
+       height="70.48835"
+       id="rect861" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="341.23927"
+     inkscape:cy="36.184816"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1710"
+     inkscape:window-height="1030"
+     inkscape:window-x="96"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     units="px"
+     lock-margins="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-21.984233,-109.54024)">
+    <g
+       id="g868"
+       transform="matrix(0.76601518,0,0,0.76601518,-15.154676,62.778899)"
+       style="stroke:none;stroke-opacity:1;fill:#67ecb4;fill-opacity:1">
+      <path
+         id="path10"
+         style="fill:#67ecb4;fill-rule:evenodd;stroke:none;stroke-width:16.4012;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
+         d="M 110.3418 8.2011719 A 102.14056 102.14056 0 0 0 8.2011719 110.3418 A 102.14056 102.14056 0 0 0 110.3418 212.48242 A 102.14056 102.14056 0 0 0 212.48242 110.3418 A 102.14056 102.14056 0 0 0 192.26758 49.341797 L 140.59375 100.74805 A 31.738578 31.738578 0 0 1 142.08008 110.3418 A 31.738578 31.738578 0 0 1 110.3418 142.08008 A 31.738578 31.738578 0 0 1 78.603516 110.3418 A 31.738578 31.738578 0 0 1 110.3418 78.603516 A 31.738578 31.738578 0 0 1 121.52539 80.638672 L 172.85938 29.570312 A 102.14056 102.14056 0 0 0 110.3418 8.2011719 z "
+         transform="matrix(0.34540221,0,0,0.34540221,48.483254,61.044922)" />
+    </g>
+    <text
+       xml:space="preserve"
+       id="text859"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect861);fill:#000000;fill-opacity:1;stroke:none;"
+       transform="matrix(1.5846165,0,0,1.5846165,-129.0537,-23.725933)"><tspan
+         x="136.30664"
+         y="112.60004"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.75px;font-family:'Franklin Gothic Demi';-inkscape-font-specification:'Franklin Gothic Demi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1">Arigato</tspan></tspan></text>
+  </g>
+</svg>
