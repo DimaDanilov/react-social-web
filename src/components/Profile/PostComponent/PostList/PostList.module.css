@@ -1,0 +1,5 @@
+.container{
+    width: 60%;
+    display: grid;
+    row-gap: 2ch;
+}

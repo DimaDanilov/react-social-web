@@ -1,0 +1,10 @@
+.nav{
+    grid-area: nav;
+    background-color: rgb(204, 245, 247);
+    padding: 5%;
+}
+
+.nav_menu{
+    display: grid;
+    grid-gap: 1.5vh;
+}

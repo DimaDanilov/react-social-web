@@ -1,0 +1,14 @@
+.post_container{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-gap: 4%;
+}
+
+.img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.message{
+    align-self: center;
+}

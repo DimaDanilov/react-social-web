@@ -1,0 +1,39 @@
+.form{
+    display: grid;
+    gap: 2ch;
+    width: 40%;
+}
+
+.textarea{
+    transition: 0.5s;
+    resize: none;
+    overflow: auto;
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid rgb(69, 178, 197);
+    box-shadow: 1px 1px 1px rgb(148, 191, 199);
+    
+}
+
+.textarea:focus{
+    outline: none;
+    border-color: #3991A1;
+    box-shadow: 0 0 10pt 0pt rgb(69, 178, 197);
+}
+
+.button{
+    transition: 0.3s;
+    background-color: #3991A1;
+    border: 1px solid #D3F5FC;
+    color: #D3F5FC;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+.button:hover{
+    background-color:#D3F5FC;
+    color: #3991A1;
+    border-color: #3991A1;
+    cursor: pointer;
+}

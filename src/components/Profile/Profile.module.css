@@ -1,6 +1,6 @@
 .content{
     grid-area: cont;
-    background-color: rgb(113, 213, 231);
+    background-color: rgb(176, 237, 248);
 }
 
 .profile__background_wrapper{
@@ -13,3 +13,8 @@
     width: 100%;
 }
 
+.profile__text_wrapper{
+    display: grid;
+    row-gap: 2ch;
+    padding: 1.5% 3%;
+}
