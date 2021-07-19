@@ -1,6 +1,6 @@
 import style from './PostList.module.css'
 import Post from './Post/Post'
-import avatar1 from '../../../../img/avatar/avatar_1.jpg'
+import avatar1 from '../../../../../img/avatar/avatar_1.jpg'
 
 function PostList() {
     return (

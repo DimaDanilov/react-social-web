@@ -1,4 +1,4 @@
-import background_profile from '../../img/back_1.jpg'
+import background_profile from '../../../img/back_1.jpg'
 import PostComponent from './PostComponent/PostComponent'
 import style from './Profile.module.css'
 
