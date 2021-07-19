@@ -1,8 +1,8 @@
-import user from '../../logo/user.svg'
-import messages from '../../logo/email.svg'
-import news from '../../logo/newspaper.svg'
-import music from '../../logo/music.svg'
-import settings from '../../logo/settings.svg'
+import user from '../../img/logo/user.svg'
+import messages from '../../img/logo/email.svg'
+import news from '../../img/logo/newspaper.svg'
+import music from '../../img/logo/music.svg'
+import settings from '../../img/logo/settings.svg'
 import style from './NavMenu.module.css'
 import NavLink from './NavLink/NavLink'
 
