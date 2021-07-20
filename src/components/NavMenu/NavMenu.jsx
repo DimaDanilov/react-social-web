@@ -4,17 +4,17 @@ import news from '../../img/logo/newspaper.svg'
 import music from '../../img/logo/music.svg'
 import settings from '../../img/logo/settings.svg'
 import style from './NavMenu.module.css'
-import NavLink from './NavLink/NavLink'
+import NavItem from './NavItem/NavItem'
 
 function NavMenu() {
     return (
         <div className={style.nav}>
             <div className={style.nav_menu}>
-                <NavLink link_img={user} link_text="Профиль" link="/profile" />
-                <NavLink link_img={messages} link_text="Сообщения" link="/messages" />
-                <NavLink link_img={news} link_text="Новости" link="/news"/>
-                <NavLink link_img={music} link_text="Музыка" link="/music"/>
-                <NavLink link_img={settings} link_text="Настройки" link="/settings"/>
+                <NavItem link_img={user} link_text="Профиль" link="/profile" />
+                <NavItem link_img={messages} link_text="Сообщения" link="/messages" />
+                <NavItem link_img={news} link_text="Новости" link="/news"/>
+                <NavItem link_img={music} link_text="Музыка" link="/music"/>
+                <NavItem link_img={settings} link_text="Настройки" link="/settings"/>
             </div>
         </div>
     )

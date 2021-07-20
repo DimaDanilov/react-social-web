@@ -11,28 +11,28 @@
     padding: 10px;
     line-height: 1.5;
     border-radius: 5px;
-    border: 1px solid rgb(69, 178, 197);
-    box-shadow: 1px 1px 1px rgb(148, 191, 199);
+    border: 1px solid rgb(99, 206, 224);
+    box-shadow: 1px 1px 1px #CCF5F7;
     
 }
 
 .textarea:focus{
     outline: none;
     border-color: #3991A1;
-    box-shadow: 0 0 10pt 0pt rgb(69, 178, 197);
+    box-shadow: 0 0 10pt 0pt #afe2e6;
 }
 
 .button{
     transition: 0.3s;
     background-color: #3991A1;
     border: 1px solid #D3F5FC;
-    color: #D3F5FC;
+    color: #EDFEFF;
     border-radius: 20px;
     padding: 2%;
 }
 
 .button:hover{
-    background-color:#D3F5FC;
+    background-color: transparent;
     color: #3991A1;
     border-color: #3991A1;
     cursor: pointer;
