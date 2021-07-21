@@ -2,7 +2,7 @@ import style from './Settings.module.css'
 
 const Settings = () => {
     return (
-        <div className={style.content}>
+        <div className={style.settings}>
             <h1>Settings</h1>
         </div>
     )

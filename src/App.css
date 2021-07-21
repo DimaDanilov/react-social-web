@@ -6,3 +6,8 @@
   "nav cont";
   grid-template-columns: 1fr 6fr;
 }
+
+.content{
+  grid-area: cont;
+  background-color: #EDFEFF;
+}

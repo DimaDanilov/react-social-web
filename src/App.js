@@ -15,11 +15,13 @@ function App() {
       <div className="app-wrapper">
         <Header />
         <NavMenu />
-        <Route path="/profile" component={Profile} />
-        <Route path="/messages" component={Messages} />
-        <Route path="/news" component={News} />
-        <Route path="/music" component={Music} />
-        <Route path="/settings" component={Settings} />
+        <div className="content">
+          <Route path="/profile" component={Profile} />
+          <Route path="/messages" component={Messages} />
+          <Route path="/news" component={News} />
+          <Route path="/music" component={Music} />
+          <Route path="/settings" component={Settings} />
+        </div>
       </div>
     </BrowserRouter>
   );

@@ -6,7 +6,7 @@ import style from './Profile.module.css'
 
 function Profile() {
     return (
-        <div className={style.content}>
+        <div className={style.profile}>
             <div className={style.profile__background_wrapper}>
                 <img src={background_profile} alt='' className={style.profile__background} />
             </div>
