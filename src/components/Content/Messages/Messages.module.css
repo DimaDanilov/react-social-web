@@ -11,24 +11,6 @@
     border-right: 5px solid rgba(120, 205, 209, 1);
 }
 
-.user{
-    margin: 2%;
-}
-
-.user_name{
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.active{
-    font-weight: bold;
-    color: rgb(23, 185, 194);
-}
-
-.user:hover .user_name{
-    transform: scale(1.3);
-}
-
 .chat{
     padding: 0 3%;
 }
