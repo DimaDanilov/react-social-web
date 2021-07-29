@@ -1,10 +1,9 @@
 import background_profile from '../../../img/back_1.jpg'
 import PostComponent from './PostComponent/PostComponent'
 import style from './Profile.module.css'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
 
-
-
-function Profile() {
+function Profile(props) {
     return (
         <div className={style.profile}>
             <div className={style.profile__background_wrapper}>
@@ -12,8 +11,8 @@ function Profile() {
             </div>
 
             <div className={style.profile__text_wrapper}>
-                <h2>ava+description</h2>
-                <PostComponent />
+                <ProfileInfo />
+                <PostComponent post_content={props.post_content} />
             </div>
         </div>
     )

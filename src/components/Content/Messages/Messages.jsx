@@ -2,31 +2,15 @@ import style from './Messages.module.css'
 import UserElement from './UserElement/UserElement'
 import DialogsElement from './DialogsElement/DialogsElement'
 
-const Messages = () => {
+const Messages = (props) => {
 
-    // Массив имен собеседников
-    let Users = [
-        { name: "Dima" },
-        { name: "Ivan" },
-        { name: "Kirill" },
-        { name: "Alexey" },
-        { name: "Sasha" },
-    ]
+    // Создание компонент для имен собеседников (в пропсы отправляется имя из массива users(который приходит в Messages через пропсы))
+    let UsersElements = props.users.map((user) => <UserElement id={user.id} name={user.name} />)
+    // let UsersElements = props.users.map((user) => <Route path={"/profile/"+user.id} render={() => <UserElement name={user.name} />} />)
+    // let UsersElements = props.users.map((user) => <UserElement name={user.name} />)
 
-    // Создание компонент для имен собеседников (в пропсы отправляется имя из массива Users)
-    let UsersElements = Users.map((user) => <UserElement name={user.name} />)
-
-    // Массив сообщений
-    let Dialogs = [
-        { message_content: "Hi" },
-        { message_content: "How are you?" },
-        { message_content: "I'm fine, thank you!" },
-        { message_content: "Today is a good weather! Let's go for a walk" },
-        { message_content: "Yeah, sure" }
-    ]
-
-    // Создание компонент для диалогов (в пропсы отправляется сообщение из массива Dialogs)
-    let DialogsElements = Dialogs.map((message) => <DialogsElement message_content={message.message_content} />)
+    // Создание компонент для диалогов (в пропсы отправляется сообщение из массива dialogs(который приходит в Messages через пропсы))
+    let DialogsElements = props.dialogs.map((message) => <DialogsElement message_content={message.message_content} />)
 
     return (
         <div className={style.messages}>

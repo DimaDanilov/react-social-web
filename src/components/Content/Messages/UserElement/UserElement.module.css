@@ -1,10 +1,17 @@
+.link{
+    text-decoration: none;
+    color: black;
+}
+
 .user{
     margin: 2%;
+    padding: 4% 5%;
 }
 
 .user_name{
-    display: inline-block;
     transition: 0.3s;
+    margin: 0;
+    display: inline-block;
 }
 
 .active{
