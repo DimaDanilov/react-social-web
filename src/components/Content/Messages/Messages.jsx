@@ -5,12 +5,10 @@ import DialogsElement from './DialogsElement/DialogsElement'
 const Messages = (props) => {
 
     // Создание компонент для имен собеседников (в пропсы отправляется имя из массива users(который приходит в Messages через пропсы))
-    let UsersElements = props.users.map((user) => <UserElement id={user.id} name={user.name} />)
-    // let UsersElements = props.users.map((user) => <Route path={"/profile/"+user.id} render={() => <UserElement name={user.name} />} />)
-    // let UsersElements = props.users.map((user) => <UserElement name={user.name} />)
+    let UsersElements = props.state.Users.map((user) => <UserElement id={user.id} name={user.name} />)
 
     // Создание компонент для диалогов (в пропсы отправляется сообщение из массива dialogs(который приходит в Messages через пропсы))
-    let DialogsElements = props.dialogs.map((message) => <DialogsElement message_content={message.message_content} />)
+    let DialogsElements = props.state.Dialogs.map((message) => <DialogsElement message_content={message.message_content} />)
 
     return (
         <div className={style.messages}>
