@@ -12,7 +12,7 @@ function Profile(props) {
 
             <div className={style.profile__text_wrapper}>
                 <ProfileInfo />
-                <PostComponent post_content={props.state.post_content} />
+                <PostComponent ProfilePage={props.ProfilePage} AddPost={props.AddPost} updateNewPostText={props.updateNewPostText} />
             </div>
         </div>
     )

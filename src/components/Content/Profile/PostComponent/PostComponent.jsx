@@ -1,12 +1,14 @@
 import style from './PostComponent.module.css'
-import AddPost from './AddPost/AddPost'
+import PostForm from './PostForm/PostForm'
 import PostList from './PostList/PostList'
 
 function PostComponent(props) {
     return (
         <div className={style.container}>
-            <AddPost />
-            <PostList post_content={props.post_content} />
+            <h2>Моя стена</h2>
+            <h3>Добавить пост</h3>
+            <PostForm NewPostText={props.ProfilePage.NewPostText} AddPost={props.AddPost} updateNewPostText={props.updateNewPostText} />
+            <PostList post_content={props.ProfilePage.post_content} />
         </div>
     )
 }

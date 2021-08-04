@@ -1,13 +1,16 @@
 import avatar1 from '../img/avatar/avatar_1.jpg'
+import rerenderTree from '../render'
 
 let state = {
     ProfilePage: {
         // Контент постов
         post_content: [
-            { message: "Hi, this is my profile!", avatar: avatar1 },
-            { message: "Today I made an amazing coffee! Learned to cook cappuccino. I love it :)", avatar: avatar1 },
-            { message: "Good morning everybody! It's very beautiful sunny day ^^", avatar: avatar1 },
-        ]
+            { id: 1, message: "Hi, this is my profile!", avatar: avatar1 },
+            { id: 2, message: "Today I made an amazing coffee! Learned to cook cappuccino. I love it :)", avatar: avatar1 },
+            { id: 3, message: "Good morning everybody! It's very beautiful sunny day ^^", avatar: avatar1 },
+        ],
+        // Текст в форме для нового поста
+        NewPostText: ""
     },
     MessagesPage: {
         // Собеседники с которыми ведутся диалоги
@@ -28,5 +31,22 @@ let state = {
         ],
     }
 }
+
+export let AddPost = () => {
+    let newpost = {
+        id: 4,
+        message: state.ProfilePage.NewPostText,
+        avatar: avatar1
+    }
+    state.ProfilePage.post_content.push(newpost);
+    state.ProfilePage.NewPostText = '';
+    rerenderTree();
+}
+
+export let updateNewPostText = (post_text) => {
+    state.ProfilePage.NewPostText = post_text;
+    rerenderTree();
+}
+
 
 export default state;
