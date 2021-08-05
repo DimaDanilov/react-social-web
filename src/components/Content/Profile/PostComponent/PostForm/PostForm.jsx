@@ -3,24 +3,24 @@ import React from 'react'
 
 function PostForm(props) {
 
-    let NewPostArea = React.createRef();
+    let newPostArea = React.createRef();
 
-    let AddPost = () => {
+    let addPost = () => {
         let action = { type: "ADD-POST" }
         props.dispatch(action);
     }
 
-    let PostChange = () => {
-        let area_text = NewPostArea.current.value;
-        let action = { type: "UPDATE-NEW-POST-TEXT", newText: area_text }
+    let postChange = () => {
+        let areaText = newPostArea.current.value;
+        let action = { type: "UPDATE-NEW-POST-TEXT", newText: areaText }
         props.dispatch(action);
     }
 
     return (
         <div>
             <form class={style.form} action="#" >
-                <textarea class={style.textarea} ref={NewPostArea} onChange={PostChange} name="post_content" value={props.NewPostText} placeholder="Введите содержимое поста..." rows="10" cols="70" minlength="5" maxlength="511" />
-                <input class={style.button} onClick={AddPost} type="button" value="Добавить"></input>
+                <textarea class={style.textarea} ref={newPostArea} onChange={postChange} name="postContent" value={props.newPostText} placeholder="Введите содержимое поста..." rows="10" cols="70" minlength="5" maxlength="511" />
+                <input class={style.button} onClick={addPost} type="button" value="Добавить"></input>
             </form>
         </div>
     )

@@ -5,22 +5,22 @@ import DialogsElement from './DialogsElement/DialogsElement'
 const Messages = (props) => {
 
     // Создание компонент для имен собеседников (в пропсы отправляется имя из массива users(который приходит в Messages через пропсы))
-    let UsersElements = props.MessagesPage.Users.map((user) => <UserElement id={user.id} name={user.name} />)
+    let usersElements = props.messagesPage.users.map((user) => <UserElement id={user.id} name={user.name} />)
 
     // Создание компонент для диалогов (в пропсы отправляется сообщение из массива dialogs(который приходит в Messages через пропсы))
-    let DialogsElements = props.MessagesPage.Dialogs.map((message) => <DialogsElement message_content={message.message_content} />)
+    let dialogsElements = props.messagesPage.dialogs.map((message) => <DialogsElement messageContent={message.messageContent} />)
 
     return (
         <div className={style.messages}>
 
             {/* Список пользователей с которыми ведётся чат */}
             <div className={style.users}>
-                {UsersElements}
+                {usersElements}
             </div>
 
             {/* Список сообщений */}
             <div className={style.chat}>
-                {DialogsElements}
+                {dialogsElements}
             </div>
 
         </div>

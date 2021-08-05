@@ -12,7 +12,7 @@ function Profile(props) {
 
             <div className={style.profile__text_wrapper}>
                 <ProfileInfo />
-                <PostComponent ProfilePage={props.ProfilePage} dispatch={props.dispatch} />
+                <PostComponent profilePage={props.profilePage} dispatch={props.dispatch} />
             </div>
         </div>
     )

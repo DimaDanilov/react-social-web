@@ -10,11 +10,11 @@ function NavMenu() {
     return (
         <div className={style.nav}>
             <div className={style.nav_menu}>
-                <NavItem link_img={user} link_text="Профиль" link="/profile" />
-                <NavItem link_img={messages} link_text="Сообщения" link="/messages" />
-                <NavItem link_img={news} link_text="Новости" link="/news"/>
-                <NavItem link_img={music} link_text="Музыка" link="/music"/>
-                <NavItem link_img={settings} link_text="Настройки" link="/settings"/>
+                <NavItem linkImg={user} linkText="Профиль" link="/profile" />
+                <NavItem linkImg={messages} linkText="Сообщения" link="/messages" />
+                <NavItem linkImg={news} linkText="Новости" link="/news"/>
+                <NavItem linkImg={music} linkText="Музыка" link="/music"/>
+                <NavItem linkImg={settings} linkText="Настройки" link="/settings"/>
             </div>
         </div>
     )
