@@ -6,12 +6,14 @@ function PostForm(props) {
     let NewPostArea = React.createRef();
 
     let AddPost = () => {
-        props.AddPost();
+        let action = { type: "ADD-POST" }
+        props.dispatch(action);
     }
 
     let PostChange = () => {
         let area_text = NewPostArea.current.value;
-        props.updateNewPostText(area_text);
+        let action = { type: "UPDATE-NEW-POST-TEXT", newText: area_text }
+        props.dispatch(action);
     }
 
     return (
