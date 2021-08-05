@@ -64,4 +64,9 @@ let store = {
 }
 
 
+// Action-creator'ы для выполнения нужного dispatch (здесь не выполняются, посылаются в UI в компоненту PostForm)
+export const addPostActionCreator = () => ({ type: "ADD-POST" })
+export const updateNewPostTextActionCreator = (areaText) => ({ type: "UPDATE-NEW-POST-TEXT", newText: areaText })
+
+
 export default store;

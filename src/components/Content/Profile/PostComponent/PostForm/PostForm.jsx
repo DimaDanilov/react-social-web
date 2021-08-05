@@ -1,18 +1,20 @@
 import style from './PostForm.module.css'
 import React from 'react'
+import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../../../redux/state'
+
 
 function PostForm(props) {
 
     let newPostArea = React.createRef();
 
     let addPost = () => {
-        let action = { type: "ADD-POST" }
+        let action = addPostActionCreator()
         props.dispatch(action);
     }
 
     let postChange = () => {
         let areaText = newPostArea.current.value;
-        let action = { type: "UPDATE-NEW-POST-TEXT", newText: areaText }
+        let action = updateNewPostTextActionCreator(areaText)
         props.dispatch(action);
     }
 
