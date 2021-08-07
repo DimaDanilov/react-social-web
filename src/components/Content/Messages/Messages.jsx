@@ -1,6 +1,7 @@
 import style from './Messages.module.css'
 import UserElement from './UserElement/UserElement'
 import DialogsElement from './DialogsElement/DialogsElement'
+import MessageForm from './MessageForm/MessageForm'
 
 const Messages = (props) => {
 
@@ -21,7 +22,10 @@ const Messages = (props) => {
             {/* Список сообщений */}
             <div className={style.chat}>
                 {dialogsElements}
+                <MessageForm dispatch={props.dispatch} newMessageText={props.messagesPage.newMessageText} />
             </div>
+
+
 
         </div>
     )

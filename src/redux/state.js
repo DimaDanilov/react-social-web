@@ -24,18 +24,19 @@ let store = {
             ],
             // Cообщения пользователей
             dialogs: [
-                { messageContent: "Hi" },
-                { messageContent: "How are you?" },
-                { messageContent: "I'm fine, thank you!" },
-                { messageContent: "Today is a good weather! Let's go for a walk" },
-                { messageContent: "Yeah, sure" }
+                { id: 1, messageContent: "Hi" },
+                { id: 2, messageContent: "How are you?" },
+                { id: 3, messageContent: "I'm fine, thank you!" },
+                { id: 4, messageContent: "Today is a good weather! Let's go for a walk" },
+                { id: 5, messageContent: "Yeah, sure" }
             ],
+            newMessageText: ""
         }
     },
     _callSubscriber() {
         // Локальная функция в которую приходит функция перерендера из индекса при вызове subscribe()
     },
-    
+
 
     getState() {
         return this._state;
@@ -46,8 +47,8 @@ let store = {
         this._callSubscriber = observer;
     },
 
-    dispatch(action){
-        if (action.type === "ADD-POST"){
+    dispatch(action) {
+        if (action.type === "ADD-POST") {
             let newPost = {
                 id: 4,
                 message: this._state.profilePage.newPostText,
@@ -56,17 +57,31 @@ let store = {
             this._state.profilePage.postContent.push(newPost);
             this._state.profilePage.newPostText = '';
             this._callSubscriber(this._state);
-        } else if (action.type === "UPDATE-NEW-POST-TEXT"){
+        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
             this._state.profilePage.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        } else if (action.type === "SEND-MESSAGE") {
+            let newMessage = {
+                id: 6,
+                messageContent: this._state.messagesPage.newMessageText,
+            };
+            this._state.messagesPage.dialogs.push(newMessage);
+            this._state.messagesPage.newMessageText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === "UPDATE-NEW-MESSAGE-TEXT") {
+            this._state.messagesPage.newMessageText = action.messageText;
             this._callSubscriber(this._state);
         }
     }
 }
 
 
-// Action-creator'ы для выполнения нужного dispatch (здесь не выполняются, посылаются в UI в компоненту PostForm)
+// Action-creator'ы для выполнения нужного dispatch (здесь не выполняются, посылаются в UI в компоненты с формами)
 export const addPostActionCreator = () => ({ type: "ADD-POST" })
 export const updateNewPostTextActionCreator = (areaText) => ({ type: "UPDATE-NEW-POST-TEXT", newText: areaText })
+export const sendMessageActionCreator = () => ({ type: "SEND-MESSAGE" })
+export const updateNewMessageTextActionCreator = (messageText) => ({ type: "UPDATE-NEW-MESSAGE-TEXT", messageText: messageText })
+
 
 
 export default store;
