@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./MessageForm.module.css"
-import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../../../../redux/state'
+import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../../../../redux/messages-reducer'
 
 const MessageForm = (props) => {
 
