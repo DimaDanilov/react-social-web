@@ -1,6 +1,19 @@
 import avatar1 from '../img/avatar/avatar_1.jpg'
 
-const profileReducer = (state, action) => {
+// State для инициализации
+let initialState = {
+    // Контент постов
+    postContent: [
+        { id: 1, message: "Hi, this is my profile!", avatar: avatar1 },
+        { id: 2, message: "Today I made an amazing coffee! Learned to cook cappuccino. I love it :)", avatar: avatar1 },
+        { id: 3, message: "Good morning everybody! It's very beautiful sunny day ^^", avatar: avatar1 },
+    ],
+    // Текст в форме для нового поста
+    newPostText: ""
+
+}
+
+const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD-POST":
             let newPost = {
