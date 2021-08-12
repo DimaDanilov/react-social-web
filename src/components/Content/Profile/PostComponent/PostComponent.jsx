@@ -1,5 +1,5 @@
 import style from './PostComponent.module.css'
-import PostForm from './PostForm/PostForm'
+import PostFormContainer from './PostForm/PostFormContainer'
 import PostList from './PostList/PostList'
 
 function PostComponent(props) {
@@ -7,8 +7,8 @@ function PostComponent(props) {
         <div className={style.container}>
             <h2>Моя стена</h2>
             <h3>Добавить пост</h3>
-            <PostForm newPostText={props.profilePage.newPostText} dispatch={props.dispatch} />
-            <PostList postContent={props.profilePage.postContent} />
+            <PostFormContainer store={props.store} />
+            <PostList store={props.store}  />
         </div>
     )
 }

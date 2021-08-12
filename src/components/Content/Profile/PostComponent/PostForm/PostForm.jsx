@@ -1,26 +1,22 @@
 import style from './PostForm.module.css'
-import React from 'react'
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../../../redux/profile-reducer'
-
 
 function PostForm(props) {
-
-    let addPost = () => {
-        let action = addPostActionCreator()
-        props.dispatch(action);
+    // Функция вызываемая ивентом клика добавления поста
+    let onAddPost = () => {
+        props.addPost();
     }
 
-    let postChange = (e) => {
+    // Функция вызываемая ивентом изменения формы добавления поста
+    let onPostChange = (e) => {
         let areaText = e.target.value;
-        let action = updateNewPostTextActionCreator(areaText)
-        props.dispatch(action);
+        props.postChange(areaText);
     }
 
     return (
         <div>
             <form class={style.form} action="#" >
-                <textarea class={style.textarea} onChange={postChange} name="postContent" value={props.newPostText} placeholder="Введите содержимое поста..." rows="10" cols="70" minlength="5" maxlength="511" />
-                <input class={style.button} onClick={addPost} type="button" value="Добавить"></input>
+                <textarea class={style.textarea} onChange={onPostChange} name="postContent" value={props.newPostText} placeholder="Введите содержимое поста..." rows="10" cols="70" minlength="5" maxlength="511" />
+                <input class={style.button} onClick={onAddPost} type="button" value="Добавить"></input>
             </form>
         </div>
     )
