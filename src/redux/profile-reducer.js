@@ -10,23 +10,22 @@ let initialState = {
     ],
     // Текст в форме для нового поста
     newPostText: ""
-
 }
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD-POST":
-            let newPost = {
-                id: 4,
-                message: state.newPostText,
-                avatar: avatar1
-            };
-            state.postContent.push(newPost);
-            state.newPostText = '';
-            return state;
+            let newPost = { id: 4, message: state.newPostText, avatar: avatar1 };
+            return {
+                ...state,
+                postContent: [...state.postContent, newPost],
+                newPostText: ''
+            }
         case "UPDATE-NEW-POST-TEXT":
-            state.newPostText = action.newText;
-            return state;
+            return {
+                ...state,
+                newPostText: action.newText
+            }
         default:
             return state;
     }

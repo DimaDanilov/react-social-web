@@ -1,24 +1,20 @@
 import MessageForm from "./MessageForm";
 import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../../../../redux/messages-reducer'
+import { connect } from 'react-redux'
 
-const MessageFormContainer = (props) => {
-    let state = props.store.getState();
-
-    // Отправка сообщения. Вызывается в MessageForm, отправляет action типа "SEND-MESSAGE"
-    let sendMessage = () => {
-        let action = sendMessageActionCreator();
-        props.store.dispatch(action);
+const mapStateToProps = (state) => {
+    return {
+        newMessageText: state.messagesPage.newMessageText
     }
-
-    // Обновление формы отправки сообщения. Вызывается в MessageForm, отправляет action типа "UPDATE-NEW-MESSAGE-TEXT"
-    let updateNewMessageText = (messageText) => {
-        let action = updateNewMessageTextActionCreator(messageText);
-        props.store.dispatch(action);
-    }
-
-    return (
-        <MessageForm sendMessage={sendMessage} updateNewMessageText={updateNewMessageText} newMessageText={state.messagesPage.newMessageText} />
-    )
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        sendMessage: () => { dispatch(sendMessageActionCreator()); },
+        updateNewMessageText: (messageText) => { dispatch(updateNewMessageTextActionCreator(messageText)); }
+    }
+}
+
+const MessageFormContainer = connect(mapStateToProps, mapDispatchToProps)(MessageForm)
 
 export default MessageFormContainer
