@@ -5,7 +5,7 @@ import MessageFormContainer from './MessageForm/MessageFormContainer'
 
 const Messages = (props) => {
     let state = props.store.getState().messagesPage;
-    
+
     // Создание компонент для имен собеседников (в пропсы отправляется имя из массива users(который приходит в Messages через пропсы))
     let usersElements = state.users.map((user) => <UserElement id={user.id} name={user.name} />)
 

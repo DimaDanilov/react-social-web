@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import NavMenu from './components/NavMenu/NavMenu';
 import Profile from './components/Content/Profile/Profile';
-import Messages from './components/Content/Messages/Messages';
+import MessagesContainer from './components/Content/Messages/MessagesContainer';
 import News from './components/Content/News/News';
 import Music from './components/Content/Music/Music';
 import Settings from './components/Content/Settings/Settings';
@@ -15,8 +15,8 @@ function App(props) {
       <Header />
       <NavMenu />
       <div className="content">
-        <Route path="/profile" render={() => <Profile store={props.store} />} />
-        <Route path="/messages" render={() => <Messages store={props.store} />} />
+        <Route path="/profile" render={() => <Profile />} />
+        <Route path="/messages" render={() => <MessagesContainer />} />
         <Route path="/news" render={() => <News />} />
         <Route path="/music" render={() => <Music />} />
         <Route path="/settings" render={() => <Settings />} />

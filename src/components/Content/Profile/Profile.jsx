@@ -12,7 +12,7 @@ function Profile(props) {
 
             <div className={style.profile__text_wrapper}>
                 <ProfileInfo />
-                <PostComponent store={props.store} />
+                <PostComponent />
             </div>
         </div>
     )
