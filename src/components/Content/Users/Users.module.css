@@ -8,8 +8,8 @@
     margin: 5vh auto;
     padding: 2% 1%;
     display: grid;
-    grid-template-areas: "user_img user_info user_location" "user_img user_info user_location";
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "user_img user_info" "user_img user_info";
+    grid-template-columns: 1fr 4fr ;
     column-gap: 2%;
     border: 2px solid #3991A1;
     border-radius: 20px;
@@ -38,11 +38,6 @@
 
 .user_card .user_info{
     grid-area: user_info;
-}
-
-.user_card .user_location{
-    text-align: end;
-    grid-area: user_location;
 }
 
 .button{
