@@ -1,7 +1,10 @@
 // State для инициализации
 let initialState = {
     // Данные пользователей
-    usersData: [ ]
+    usersData: [],
+    pageSize: 10,
+    usersAmount: 1,
+    currentPage: 1
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -28,6 +31,10 @@ const usersReducer = (state = initialState, action) => {
             }
         case "SET-USERS":
             return { ...state, usersData: [...action.usersData] }
+        case "SET-CURRENT-PAGE":
+            return { ...state, currentPage: action.currentPage}
+        case "SET-TOTAL-USERS-AMOUNT":
+            return { ...state, usersAmount: action.usersAmount}
         default:
             return state;
     }
@@ -37,5 +44,7 @@ const usersReducer = (state = initialState, action) => {
 export const followAC = (userId) => ({ type: "FOLLOW", userId })
 export const unfollowAC = (userId) => ({ type: "UNFOLLOW", userId })
 export const setUsersAC = (usersData) => ({ type: "SET-USERS", usersData })
+export const setCurrentPageAC = (currentPage) => ({ type: "SET-CURRENT-PAGE", currentPage })
+export const setTotalUsersAmountAC = (usersAmount) => ({ type: "SET-TOTAL-USERS-AMOUNT", usersAmount })
 
 export default usersReducer

@@ -1,46 +1,66 @@
+/* Стили списка страниц (1, 2, 3, 4, 5) */
+
+.pages_list {
+    margin: 2% auto;
+}
+
+.pageIcon {
+    background-color: #78cdd1;
+    color: white;
+    margin: 0 0.4%;
+    padding: 0.5% 1%;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.pageIcon:hover {
+    background-color: #5db5b9;
+}
+
+.selectedPage {
+    font-weight: bold;
+    background-color: #3991A1;
+}
+
+/* Контейнер пользователей */
+
 .users_container {
     width: 90%;
     margin: 0 auto;
 }
 
+/* Карточка User */
+
+/* Общая разметка */
+
 .user_card {
     width: 65%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
     margin: 5vh auto;
     padding: 2% 1%;
-    display: grid;
-    grid-template-areas: "user_img user_info" "user_img user_info";
-    grid-template-columns: 1fr 4fr ;
     column-gap: 2%;
     border: 2px solid #3991A1;
     border-radius: 20px;
 }
 
-.img_container img{
+/* Поведение блоков внутри карточки User */
+
+.img_container, .user_info {
+    display: grid;
+    row-gap: 5%;
+}
+
+/* Настройки блока Image */
+
+.img_container img {
     width: 70%;
     margin: 0 auto;
     border-radius: 50%;
 }
 
-.img_container button{
+.img_container .button {
     width: 100%;
-}
-
-.img_container, .user_info, .user_location{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.img_container{
-    grid-area: user_img;
-    gap: 1vh;
-}
-
-.user_card .user_info{
-    grid-area: user_info;
-}
-
-.button{
     transition: 0.3s;
     background-color: #3991A1;
     border: 1px solid #D3F5FC;
@@ -49,9 +69,15 @@
     padding: 5%;
 }
 
-.button:hover{
+.img_container .button:hover {
     background-color: transparent;
     color: #3991A1;
     border-color: #3991A1;
     cursor: pointer;
+}
+
+/* Настройка блоков внутри User-Info */
+
+.user_info p {
+    margin-top: 0;
 }
