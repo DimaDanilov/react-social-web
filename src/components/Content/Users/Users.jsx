@@ -12,11 +12,13 @@ class Users extends React.Component {
     }
 
     onPageChanged(pageNumber) {
-        if (Number.isInteger(pageNumber)) /* Проверка на число (защита от кнопки "...") */
+        /* Проверка на число (защита от кнопки "...") */
+        if (Number.isInteger(pageNumber)) {
             this.props.setCurrentPage(pageNumber);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => {
-            this.props.setUsers(response.data.items);
-        })
+            axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => {
+                this.props.setUsers(response.data.items);
+            })
+        }
     }
 
 
@@ -39,11 +41,16 @@ class Users extends React.Component {
                 default:
                     return [1, "...", currentPage - 2, currentPage - 1, currentPage, currentPage + 1, currentPage + 2, "...", pagesCount];
             }
-        } else return [1, 2, 3, 4, 5];
+        } else if (0 < pagesCount && pagesCount < 6) {
+            let pageList = [];
+            for (let i = 1; i <= pagesCount; i++) {
+                pageList.push(i);
+            }
+            return pageList;
+        } else return [];
     }
 
     render() {
-
         let pages = this.pagesListing(this.props.usersAmount, this.props.pageSize, this.props.currentPage)
 
         return (
