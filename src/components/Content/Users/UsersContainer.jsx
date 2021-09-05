@@ -2,11 +2,14 @@ import React from 'react';
 import axios from 'axios'
 import Users from './Users'
 import { connect } from 'react-redux'
-import { follow, unfollow, setUsers, setCurrentPage, setTotalUsersAmount } from '../../../redux/users-reducer'
+import { follow, unfollow, setUsers, setCurrentPage, setTotalUsersAmount, setLoading } from '../../../redux/users-reducer'
+import Preloader from '../../common/Preloader/Preloader'
 
 class UsersContainerAPI extends React.Component {
     componentDidMount() {
+        this.props.setLoading(true);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
+            this.props.setLoading(false);
             this.props.setUsers(response.data.items);
             this.props.setTotalUsersAmount(response.data.totalCount);
         })
@@ -16,7 +19,9 @@ class UsersContainerAPI extends React.Component {
         /* Проверка на число (защита от кнопки "...") */
         if (Number.isInteger(pageNumber)) {
             this.props.setCurrentPage(pageNumber);
+            this.props.setLoading(true);
             axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => {
+                this.props.setLoading(false);
                 this.props.setUsers(response.data.items);
             })
         }
@@ -51,16 +56,19 @@ class UsersContainerAPI extends React.Component {
     }
 
     render() {
-        return <Users
-            onPageChanged={this.onPageChanged}
-            pagesListing={this.pagesListing}
-            usersAmount={this.props.usersAmount}
-            pageSize={this.props.pageSize}
-            currentPage={this.props.currentPage}
-            usersData={this.props.usersData}
-            follow={this.props.follow}
-            unfollow={this.props.unfollow}
-        />
+        return <>
+            {this.props.isLoading ? <Preloader /> : null}
+            <Users
+                onPageChanged={this.onPageChanged}
+                pagesListing={this.pagesListing}
+                usersAmount={this.props.usersAmount}
+                pageSize={this.props.pageSize}
+                currentPage={this.props.currentPage}
+                usersData={this.props.usersData}
+                follow={this.props.follow}
+                unfollow={this.props.unfollow}
+            />
+        </>
     }
 }
 
@@ -69,10 +77,12 @@ const mapStateToProps = (state) => {
         usersData: state.usersPage.usersData,
         pageSize: state.usersPage.pageSize,
         usersAmount: state.usersPage.usersAmount,
-        currentPage: state.usersPage.currentPage
+        currentPage: state.usersPage.currentPage,
+        isLoading: state.usersPage.isLoading
     }
 }
 
-const UsersContainer = connect(mapStateToProps, { follow, unfollow, setUsers, setCurrentPage, setTotalUsersAmount })(UsersContainerAPI)
+
+const UsersContainer = connect(mapStateToProps, { follow, unfollow, setUsers, setCurrentPage, setTotalUsersAmount, setLoading })(UsersContainerAPI)
 
 export default UsersContainer

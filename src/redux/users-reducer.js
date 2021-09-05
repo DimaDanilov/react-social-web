@@ -4,7 +4,8 @@ let initialState = {
     usersData: [],
     pageSize: 10,
     usersAmount: 1,
-    currentPage: 1
+    currentPage: 1,
+    isLoading: true
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -35,6 +36,8 @@ const usersReducer = (state = initialState, action) => {
             return { ...state, currentPage: action.currentPage}
         case "SET-TOTAL-USERS-AMOUNT":
             return { ...state, usersAmount: action.usersAmount}
+        case "SET-LOADING":
+            return { ...state, isLoading: action.isLoading}
         default:
             return state;
     }
@@ -46,5 +49,6 @@ export const unfollow = (userId) => ({ type: "UNFOLLOW", userId })
 export const setUsers = (usersData) => ({ type: "SET-USERS", usersData })
 export const setCurrentPage = (currentPage) => ({ type: "SET-CURRENT-PAGE", currentPage })
 export const setTotalUsersAmount = (usersAmount) => ({ type: "SET-TOTAL-USERS-AMOUNT", usersAmount })
+export const setLoading = (isLoading) => ({ type: "SET-LOADING", isLoading })
 
 export default usersReducer
