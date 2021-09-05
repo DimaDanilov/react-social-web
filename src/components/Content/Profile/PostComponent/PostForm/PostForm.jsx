@@ -9,7 +9,7 @@ function PostForm(props) {
     // Функция вызываемая ивентом изменения формы добавления поста
     let onPostChange = (e) => {
         let areaText = e.target.value;
-        props.postChange(areaText);
+        props.updateNewPostText(areaText);
     }
 
     return (

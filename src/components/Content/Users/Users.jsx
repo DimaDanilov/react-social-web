@@ -24,7 +24,7 @@ const Users = (props) => {
                         <div key={user.id} className={style.user_card}>
                             <div className={style.img_container}>
                                 {/* Проверка наличия картинки в response. При отсутствии вывод заглушки */}
-                                <img src={user.photos.small != null ? user.photos.small : defaultUserPhoto} />
+                                <img src={user.photos.small != null ? user.photos.small : defaultUserPhoto} alt="" />
                                 {/* Кнопка и её контент в зависимости от response */}
                                 {user.followed
                                     ? <button className={style.button} onClick={() => { props.unfollow(user.id) }}>Unfollow</button>

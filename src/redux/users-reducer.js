@@ -41,10 +41,10 @@ const usersReducer = (state = initialState, action) => {
 }
 
 // Action-creator'ы для выполнения нужного dispatch (здесь не выполняются, посылаются в UI в компоненту Users)
-export const followAC = (userId) => ({ type: "FOLLOW", userId })
-export const unfollowAC = (userId) => ({ type: "UNFOLLOW", userId })
-export const setUsersAC = (usersData) => ({ type: "SET-USERS", usersData })
-export const setCurrentPageAC = (currentPage) => ({ type: "SET-CURRENT-PAGE", currentPage })
-export const setTotalUsersAmountAC = (usersAmount) => ({ type: "SET-TOTAL-USERS-AMOUNT", usersAmount })
+export const follow = (userId) => ({ type: "FOLLOW", userId })
+export const unfollow = (userId) => ({ type: "UNFOLLOW", userId })
+export const setUsers = (usersData) => ({ type: "SET-USERS", usersData })
+export const setCurrentPage = (currentPage) => ({ type: "SET-CURRENT-PAGE", currentPage })
+export const setTotalUsersAmount = (usersAmount) => ({ type: "SET-TOTAL-USERS-AMOUNT", usersAmount })
 
 export default usersReducer

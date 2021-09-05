@@ -39,8 +39,8 @@ const messagesReducer = (state = initialState, action) => {
 }
 
 // Action-creator'ы для выполнения нужного dispatch (здесь не выполняются, посылаются в UI в компоненту MessageForm)
-export const sendMessageActionCreator = () => ({ type: "SEND-MESSAGE" })
-export const updateNewMessageTextActionCreator = (messageText) => ({ type: "UPDATE-NEW-MESSAGE-TEXT", messageText: messageText })
+export const sendMessage = () => ({ type: "SEND-MESSAGE" })
+export const updateNewMessageText = (messageText) => ({ type: "UPDATE-NEW-MESSAGE-TEXT", messageText: messageText })
 
 
 export default messagesReducer

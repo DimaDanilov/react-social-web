@@ -1,5 +1,5 @@
 import MessageForm from "./MessageForm";
-import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../../../../redux/messages-reducer'
+import { sendMessage, updateNewMessageText } from '../../../../redux/messages-reducer'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
@@ -8,13 +8,6 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        sendMessage: () => { dispatch(sendMessageActionCreator()); },
-        updateNewMessageText: (messageText) => { dispatch(updateNewMessageTextActionCreator(messageText)); }
-    }
-}
-
-const MessageFormContainer = connect(mapStateToProps, mapDispatchToProps)(MessageForm)
+const MessageFormContainer = connect(mapStateToProps, { sendMessage, updateNewMessageText })(MessageForm)
 
 export default MessageFormContainer
