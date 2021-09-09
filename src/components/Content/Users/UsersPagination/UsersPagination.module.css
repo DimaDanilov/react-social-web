@@ -1,0 +1,21 @@
+.pages_list {
+    margin: 2% auto;
+}
+
+.pageIcon {
+    background-color: #78cdd1;
+    color: white;
+    margin: 0 0.4%;
+    padding: 0.5% 1%;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.pageIcon:hover {
+    background-color: #5db5b9;
+}
+
+.selectedPage {
+    font-weight: bold;
+    background-color: #3991A1;
+}

@@ -1,36 +1,3 @@
-/* Стили списка страниц (1, 2, 3, 4, 5) */
-
-.pages_list {
-    margin: 2% auto;
-}
-
-.pageIcon {
-    background-color: #78cdd1;
-    color: white;
-    margin: 0 0.4%;
-    padding: 0.5% 1%;
-    border-radius: 7px;
-    cursor: pointer;
-}
-
-.pageIcon:hover {
-    background-color: #5db5b9;
-}
-
-.selectedPage {
-    font-weight: bold;
-    background-color: #3991A1;
-}
-
-/* Контейнер пользователей */
-
-.users_container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* Карточка User */
-
 /* Общая разметка */
 
 .user_card {
@@ -51,7 +18,7 @@
     row-gap: 5%;
 }
 
-/* Настройки блока Image */
+/* Поведение первого блока img_container */
 
 .img_container img {
     width: 70%;
@@ -76,7 +43,7 @@
     cursor: pointer;
 }
 
-/* Настройка блоков внутри User-Info */
+/* Поведение второго блока user_info */
 
 .user_info p {
     margin-top: 0;

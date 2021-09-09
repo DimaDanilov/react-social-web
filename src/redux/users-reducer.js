@@ -3,7 +3,7 @@ let initialState = {
     // Данные пользователей
     usersData: [],
     pageSize: 10,
-    usersAmount: 1,
+    usersAmount: 0,
     currentPage: 1,
     isLoading: true
 }
