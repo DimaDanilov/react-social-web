@@ -11,8 +11,8 @@ function Profile(props) {
             </div>
 
             <div className={style.profile__text_wrapper}>
-                <ProfileInfo />
-                <PostComponent />
+                <ProfileInfo profileData={props.profileData} />
+                <PostComponent profileData={props.profileData}/>
             </div>
         </div>
     )

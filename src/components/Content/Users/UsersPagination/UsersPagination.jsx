@@ -8,6 +8,7 @@ const UsersPagination = (props) => {
             {pages.map(
                 page =>
                     <span
+                        key={page}
                         className={[props.currentPage === page && style.selectedPage, style.pageIcon].join(' ')}
                         onClick={() => props.onPageChanged(page)}>
                         {page}

@@ -14,9 +14,9 @@ const MessageForm = (props) => {
 
     return (
         <div>
-            <form class={style.form} action="#" >
-                <textarea class={style.textarea} onChange={onMessageChange} name="messageContent" value={props.newMessageText} placeholder="Введите сообщение..." rows="7" cols="70" minlength="5" maxlength="511" />
-                <input class={style.button} onClick={onSendMessage} type="button" value="Отправить"></input>
+            <form className={style.form} action="#" >
+                <textarea className={style.textarea} onChange={onMessageChange} name="messageContent" value={props.newMessageText} placeholder="Введите сообщение..." rows="7" cols="70" minLength="5" maxLength="511" />
+                <input className={style.button} onClick={onSendMessage} type="button" value="Отправить"></input>
             </form>
         </div>
     )

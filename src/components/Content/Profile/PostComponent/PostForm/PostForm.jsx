@@ -14,9 +14,9 @@ function PostForm(props) {
 
     return (
         <div>
-            <form class={style.form} action="#" >
-                <textarea class={style.textarea} onChange={onPostChange} name="postContent" value={props.newPostText} placeholder="Введите содержимое поста..." rows="10" cols="70" minlength="5" maxlength="511" />
-                <input class={style.button} onClick={onAddPost} type="button" value="Добавить"></input>
+            <form className={style.form} action="#" >
+                <textarea className={style.textarea} onChange={onPostChange} name="postContent" value={props.newPostText} placeholder="Введите содержимое поста..." rows="10" cols="70" minLength="5" maxLength="511" />
+                <input className={style.button} onClick={onAddPost} type="button" value="Добавить"></input>
             </form>
         </div>
     )

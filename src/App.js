@@ -2,7 +2,7 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import NavMenu from './components/NavMenu/NavMenu';
-import Profile from './components/Content/Profile/Profile';
+import ProfileContainer from './components/Content/Profile/ProfileContainer';
 import MessagesContainer from './components/Content/Messages/MessagesContainer';
 import UsersContainer from './components/Content/Users/UsersContainer';
 import News from './components/Content/News/News';
@@ -16,7 +16,7 @@ function App(props) {
       <Header />
       <NavMenu />
       <div className="content">
-        <Route path="/profile" render={() => <Profile />} />
+        <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
         <Route path="/messages" render={() => <MessagesContainer />} />
         <Route path="/users" render={() => <UsersContainer />} />
         <Route path="/news" render={() => <News />} />

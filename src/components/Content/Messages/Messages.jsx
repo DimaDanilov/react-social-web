@@ -5,10 +5,10 @@ import MessageFormContainer from './MessageForm/MessageFormContainer'
 
 const Messages = (props) => {
     // Создание компонент для имен собеседников (в пропсы отправляется имя из массива users(который приходит в Messages через пропсы))
-    let usersElements = props.users.map((user) => <UserElement id={user.id} name={user.name} />)
+    let usersElements = props.users.map((user) => <UserElement key={user.id} id={user.id} name={user.name} />)
 
     // Создание компонент для диалогов (в пропсы отправляется сообщение из массива dialogs(который приходит в Messages через пропсы))
-    let dialogsElements = props.dialogs.map((message) => <DialogsElement messageContent={message.messageContent} />)
+    let dialogsElements = props.dialogs.map((message) => <DialogsElement key={message.id} messageContent={message.messageContent} />)
 
     return (
         <div className={style.messages}>

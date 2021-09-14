@@ -1,0 +1,9 @@
+.profile_wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.profile_main_img{
+    width: 20%
+}

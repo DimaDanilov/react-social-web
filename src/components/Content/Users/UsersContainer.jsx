@@ -44,7 +44,7 @@ class UsersContainerAPI extends React.Component {
                 case pagesCount - 2:
                     return [1, "...", pagesCount - 5, pagesCount - 4, pagesCount - 3, pagesCount - 2, pagesCount - 1, pagesCount];
                 default:
-                    return [1, "...", currentPage - 2, currentPage - 1, currentPage, currentPage + 1, currentPage + 2, "...", pagesCount];
+                    return [1, "..", currentPage - 2, currentPage - 1, currentPage, currentPage + 1, currentPage + 2, "...", pagesCount];
             }
         } else if (0 < pagesCount && pagesCount < 6) {
             let pageList = [];
