@@ -8,7 +8,7 @@ const UsersCard = (props) => {
         <div className={style.user_card}>
             <div className={style.img_container}>
                 {/* Проверка наличия картинки в response. При отсутствии вывод заглушки */}
-                <NavLink to={'profile/' + props.user.id}>
+                <NavLink className={style.user_link} to={'profile/' + props.user.id}>
                     <img src={props.user.photos.small != null ? props.user.photos.small : defaultUserPhoto} alt="" />
                 </NavLink>
                 {/* Кнопка и её контент в зависимости от response */}

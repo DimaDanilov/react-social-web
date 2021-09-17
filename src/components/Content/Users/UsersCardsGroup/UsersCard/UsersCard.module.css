@@ -19,6 +19,10 @@
 }
 
 /* Поведение первого блока img_container */
+.user_link{
+    display: flex;
+    justify-content: center;
+}
 
 .img_container img {
     width: 70%;

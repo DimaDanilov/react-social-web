@@ -1,5 +1,9 @@
 .container{
     width: 100%;
     display: grid;
-    gap: 2ch;
+    gap: 1.5ch;
+}
+
+.post_info{
+    margin: 1% 0;
 }

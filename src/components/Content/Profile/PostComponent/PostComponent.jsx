@@ -5,8 +5,8 @@ import PostListContainer from './PostList/PostListContainer'
 function PostComponent(props) {
     return (
         <div className={style.container}>
-            <h2>Моя стена</h2>
-            <h3>Добавить пост</h3>
+            <h2 className={style.post_info}>Моя стена</h2>
+            <h3 className={style.post_info}>Добавить пост</h3>
             <PostFormContainer />
             <PostListContainer />
         </div>
